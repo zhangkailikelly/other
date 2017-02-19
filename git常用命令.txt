@@ -1,0 +1,35 @@
+﻿
+
+
+git pull:  当前分支自动与唯一一个追踪分支进行合并 主分支使用
+
+
+git branch ：查看所有分支，所在分支
+
+
+git checkout 分支 :切换分支
+
+
+git branch 分支 ：添加分支
+
+
+
+
+git pull origin 分支 ，取回远程主机某个分支的更新， 分支使用
+
+
+
+git merge 分支  ， 把分支合并到当前分支
+
+
+
+
+
+
+
+
+
+
+git pull origin qhtf  //更新到本地
+
+git push origin qhtf  //提交到qhtf 

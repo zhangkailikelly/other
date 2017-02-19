@@ -1,0 +1,66 @@
+第一次先git clone [url] 工作时先把代码复制一份,做备份，git clone的作用就是不用在初始化仓库
+
+git push 推送也就是提交至远程仓库
+
+git pull 获取同时会合并===>>>等价于 git clone + git merge origin/master
+
+git fetch 获取不会合并  ,然后git difftool origin/master显示本地分支与远程分支所拉会来的本地分支的差异 然后 git merge origin/master 合并分支，在然后git push 地址 提交
+
+
+git branch -a 显示本地所有分支，当git fetch时，会把远程仓库拉下来，
+
+git log --graph 提交历史的图形化界面
+
+
+二、配置
+Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。
+
+git config --list 查看配置
+
+ 显示当前的Git配置
+$ git config --list
+
+# 编辑Git配置文件
+$ git config -e [--global]
+
+# 设置提交代码时的用户信息
+$ git config [--global] user.name "[name]"
+$ git config [--global] user.email "[email address]"
+
+五、分支
+
+# 列出所有本地分支和远程分支
+$ git branch -a
+# 新建一个分支，但依然停留在当前分支
+$ git branch [branch-name]
+
+# 新建一个分支，并切换到该分支
+$ git checkout -b [branch]
+# 删除分支
+$ git branch -d [branch-name]
+
+八、远程同步
+
+# 取回远程仓库的变化，并与本地分支合并
+$ git pull [remote] [branch]
+
+# 上传本地指定分支到远程仓库
+$ git push [remote] [branch]
+
+# 强行推送当前分支到远程仓库，即使有冲突
+$ git push [remote] --force
+
+# 推送所有分支到远程仓库
+$ git push [remote] --all
+
+九、撤销
+
+# 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致
+$ git reset --hard [commit]
+
+
+git remote add origin git@github.com:Botue/repo.git
+这样origin 就代表 git@github.com:Botue/repo.git
+
+
+ssh-keygen -t rsa 然后一路回车，这里会在当前用户生成了一个.ssh的文件夹
